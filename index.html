@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TULIP4SM1 — Independent Software Development</title>
+
+    <meta name="description"
+          content="TULIP4SM1 — Independent software development, applications and tools.">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: #0b0d10;
+            color: #f2f2f2;
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Arial,
+                sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            margin: auto;
+            padding: 0 22px;
+        }
+
+        header {
+            padding: 70px 0 45px;
+            text-align: center;
+        }
+
+        .brand {
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: 3px;
+            color: #e4a518;
+        }
+
+        .tagline {
+            margin-top: 10px;
+            color: #b9bec5;
+            font-size: 17px;
+        }
+
+        nav {
+            border-top: 1px solid #20242a;
+            border-bottom: 1px solid #20242a;
+            padding: 14px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #b9bec5;
+            text-decoration: none;
+            margin: 0 12px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #e4a518;
+        }
+
+        section {
+            padding: 55px 0;
+            border-bottom: 1px solid #20242a;
+        }
+
+        h2 {
+            margin: 0 0 18px;
+            color: #e4a518;
+            font-size: 25px;
+        }
+
+        p {
+            color: #c8ccd1;
+            font-size: 16px;
+        }
+
+        .intro {
+            text-align: center;
+            padding-top: 65px;
+        }
+
+        .intro h1 {
+            margin: 0;
+            font-size: 30px;
+        }
+
+        .intro p {
+            max-width: 650px;
+            margin: 18px auto 0;
+        }
+
+        .app {
+            background: #13161a;
+            border: 1px solid #242930;
+            border-radius: 14px;
+            padding: 24px;
+            margin-top: 20px;
+        }
+
+        .app h3 {
+            margin: 0 0 7px;
+            font-size: 20px;
+        }
+
+        .app p {
+            margin: 0;
+        }
+
+        .support-box {
+            background: #13161a;
+            border: 1px solid #242930;
+            border-radius: 14px;
+            padding: 24px;
+            margin-top: 22px;
+        }
+
+        .support-note {
+            margin-top: 0;
+        }
+
+        .account-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 13px 0;
+            border-bottom: 1px solid #242930;
+        }
+
+        .account-row:last-child {
+            border-bottom: none;
+        }
+
+        .account-label {
+            width: 125px;
+            flex-shrink: 0;
+            color: #9fa6ae;
+            font-size: 14px;
+        }
+
+        .account-value {
+            flex: 1;
+            color: #f2f2f2;
+            word-break: break-word;
+        }
+
+        .copy-button {
+            border: 1px solid #3a4048;
+            background: #1b1f24;
+            color: #dfe3e7;
+            border-radius: 7px;
+            padding: 6px 11px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .copy-button:hover {
+            border-color: #e4a518;
+            color: #e4a518;
+        }
+
+        footer {
+            text-align: center;
+            padding: 45px 0 55px;
+            color: #777e87;
+            font-size: 14px;
+        }
+
+        .footer-brand {
+            color: #e4a518;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding-top: 50px;
+            }
+
+            .brand {
+                font-size: 32px;
+            }
+
+            .account-row {
+                align-items: flex-start;
+                flex-wrap: wrap;
+            }
+
+            .account-label {
+                width: 100%;
+            }
+
+            .account-value {
+                width: calc(100% - 65px);
+            }
+
+            nav a {
+                margin: 0 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <header>
+        <div class="brand">TULIP4SM1</div>
+
+        <div class="tagline">
+            Independent Software Development
+        </div>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#apps">Apps</a>
+        <a href="#development">Development</a>
+        <a href="#support">Support</a>
+    </nav>
+
+    <main>
+
+        <!-- ABOUT -->
+
+        <section id="about" class="intro">
+
+            <h1>Software built with purpose.</h1>
+
+            <p>
+                TULIP4SM1 is an independent software development
+                identity focused on building practical, privacy-conscious
+                applications and tools.
+            </p>
+
+        </section>
+
+
+        <!-- APPS -->
+
+        <section id="apps">
+
+            <h2>Applications</h2>
+
+            <div class="app">
+
+                <h3>TulipLock</h3>
+
+                <p>
+                    Privacy-focused file encryption for Android,
+                    designed to protect files directly on the user's device.
+                </p>
+
+            </div>
+
+            <!-- Future applications can be added here -->
+
+        </section>
+
+
+        <!-- DEVELOPMENT -->
+
+        <section id="development">
+
+            <h2>Development</h2>
+
+            <p>
+                TULIP4SM1 develops and maintains independent software
+                projects with an emphasis on simplicity, privacy,
+                reliability and user control.
+            </p>
+
+            <p>
+                Applications are developed independently and are intended
+                to remain simple, useful and respectful of the user's data.
+            </p>
+
+        </section>
+
+
+        <!-- SUPPORT -->
+
+        <section id="support">
+
+            <h2>Support TULIP4SM1</h2>
+
+            <p class="support-note">
+                Our applications are developed and maintained independently.
+                If you find our software useful and would like to support
+                continued development, you may optionally support TULIP4SM1
+                using the information below.
+            </p>
+
+            <div class="support-box">
+
+                <div class="account-row">
+
+                    <div class="account-label">
+                        Account Name
+                    </div>
+
+                    <div class="account-value" id="accountName">
+                        YOUR ACCOUNT NAME
+                    </div>
+
+                    <button
+                        class="copy-button"
+                        onclick="copyText('accountName', this)">
+                        Copy
+                    </button>
+
+                </div>
+
+
+                <div class="account-row">
+
+                    <div class="account-label">
+                        Bank
+                    </div>
+
+                    <div class="account-value" id="bankName">
+                        Habib Bank Limited (HBL)
+                    </div>
+
+                    <button
+                        class="copy-button"
+                        onclick="copyText('bankName', this)">
+                        Copy
+                    </button>
+
+                </div>
+
+
+                <div class="account-row">
+
+                    <div class="account-label">
+                        IBAN
+                    </div>
+
+                    <div class="account-value" id="iban">
+                        YOUR HBL IBAN
+                    </div>
+
+                    <button
+                        class="copy-button"
+                        onclick="copyText('iban', this)">
+                        Copy
+                    </button>
+
+                </div>
+
+
+                <div class="account-row">
+
+                    <div class="account-label">
+                        SWIFT / BIC
+                    </div>
+
+                    <div class="account-value" id="swift">
+                        YOUR HBL SWIFT/BIC
+                    </div>
+
+                    <button
+                        class="copy-button"
+                        onclick="copyText('swift', this)">
+                        Copy
+                    </button>
+
+                </div>
+
+            </div>
+
+            <p>
+                Thank you for supporting independent software development.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-brand">
+            TULIP4SM1
+        </div>
+
+        <div>
+            Independent Software Development
+        </div>
+
+        <div style="margin-top: 12px;">
+            © 2026 TULIP4SM1
+        </div>
+
+    </footer>
+
+</div>
+
+
+<script>
+
+function copyText(id, button) {
+
+    const element = document.getElementById(id);
+
+    if (!element) {
+        return;
+    }
+
+    const text = element.innerText;
+
+    navigator.clipboard.writeText(text)
+        .then(function () {
+
+            const original = button.innerText;
+
+            button.innerText = "Copied";
+
+            setTimeout(function () {
+                button.innerText = original;
+            }, 1500);
+
+        })
+        .catch(function () {
+
+            const range =
+                document.createRange();
+
+            range.selectNodeContents(element);
+
+            const selection =
+                window.getSelection();
+
+            selection.removeAllRanges();
+            selection.addRange(range);
+
+        });
+}
+
+</script>
+
+</body>
+</html>

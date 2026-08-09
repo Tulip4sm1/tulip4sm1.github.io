@@ -3,394 +3,571 @@
 
 <head>
 
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>TULIP4SM1 — Independent Software Development</title>
-
-    <meta name="description"
-          content="TULIP4SM1 — Independent software development, privacy-focused applications and practical tools.">
-
-    <style>
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            background: #0a0c0f;
-            color: #f1f1f1;
-            font-family:
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Arial,
-                sans-serif;
-            line-height: 1.6;
-        }
-
-        a {
-            color: inherit;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 960px;
-            margin: auto;
-            padding: 0 24px;
-        }
-
-        /* ================= HEADER ================= */
-
-        header {
-            padding: 75px 0 55px;
-            text-align: center;
-        }
-
-        .brand {
-            font-size: 42px;
-            font-weight: 800;
-            letter-spacing: 4px;
-            color: #e4a518;
-        }
-
-        .tagline {
-            margin-top: 10px;
-            color: #9da4ad;
-            font-size: 16px;
-            letter-spacing: .3px;
-        }
-
-        /* ================= NAV ================= */
-
-        nav {
-            border-top: 1px solid #20242a;
-            border-bottom: 1px solid #20242a;
-        }
-
-        nav .container {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        nav a {
-            padding: 15px 14px;
-            color: #aeb4bc;
-            text-decoration: none;
-            font-size: 14px;
-        }
-
-        nav a:hover {
-            color: #e4a518;
-        }
-
-        /* ================= HERO ================= */
-
-        .hero {
-            text-align: center;
-            padding: 85px 0;
-            border-bottom: 1px solid #20242a;
-        }
-
-        .hero h1 {
-            margin: 0;
-            font-size: 38px;
-            line-height: 1.2;
-        }
-
-        .hero p {
-            max-width: 650px;
-            margin: 20px auto 0;
-            color: #aeb4bc;
-            font-size: 17px;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            margin-bottom: 22px;
-            padding: 6px 13px;
-            border: 1px solid #39332a;
-            border-radius: 30px;
-            color: #e4a518;
-            font-size: 12px;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        /* ================= SECTIONS ================= */
-
-        section {
-            padding: 65px 0;
-            border-bottom: 1px solid #20242a;
-        }
-
-        h2 {
-            margin: 0 0 20px;
-            color: #e4a518;
-            font-size: 25px;
-        }
-
-        p {
-            color: #c5c9ce;
-            font-size: 16px;
-        }
-
-        /* ================= APP CARD ================= */
-
-        .app-card {
-            margin-top: 25px;
-            padding: 28px;
-            background: #121519;
-            border: 1px solid #252a30;
-            border-radius: 16px;
-        }
-
-        .app-header {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-        }
-
-        .app-icon {
-            width: 58px;
-            height: 58px;
-            border-radius: 13px;
-            background: #1b1f24;
-            border: 1px solid #30363d;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #e4a518;
-            font-size: 24px;
-            font-weight: 800;
-        }
-
-        .app-title {
-            margin: 0;
-            font-size: 21px;
-        }
-
-        .app-subtitle {
-            margin: 3px 0 0;
-            color: #858d96;
-            font-size: 14px;
-        }
-
-        .app-description {
-            margin-top: 22px;
-        }
-
-        .features {
-            margin: 20px 0 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        .features li {
-            margin: 9px 0;
-            color: #bfc4ca;
-        }
-
-        .features li::before {
-            content: "•";
-            color: #e4a518;
-            margin-right: 10px;
-        }
-
-        /* ================= DEVELOPMENT ================= */
-
-        .development-grid {
-            display: grid;
-            grid-template-columns:
-                repeat(3, 1fr);
-            gap: 15px;
-            margin-top: 25px;
-        }
-
-        .development-card {
-            padding: 22px;
-            background: #121519;
-            border: 1px solid #252a30;
-            border-radius: 14px;
-        }
-
-        .development-card strong {
-            display: block;
-            margin-bottom: 7px;
-            color: #f1f1f1;
-        }
-
-        .development-card span {
-            color: #858d96;
-            font-size: 14px;
-        }
-
-        /* ================= SUPPORT ================= */
-
-        .support-intro {
-            max-width: 700px;
-        }
-
-        .support-box {
-            margin-top: 25px;
-            padding: 26px;
-            background: #121519;
-            border: 1px solid #252a30;
-            border-radius: 16px;
-        }
-
-        .support-title {
-            margin: 0 0 5px;
-            font-size: 18px;
-        }
-
-        .support-description {
-            margin-top: 0;
-            color: #858d96;
-            font-size: 14px;
-        }
-
-        .account-row {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 15px 0;
-            border-bottom: 1px solid #252a30;
-        }
-
-        .account-row:last-child {
-            border-bottom: none;
-        }
-
-        .account-label {
-            width: 125px;
-            flex-shrink: 0;
-            color: #858d96;
-            font-size: 13px;
-        }
-
-        .account-value {
-            flex: 1;
-            color: #eeeeee;
-            word-break: break-word;
-            font-size: 15px;
-        }
-
-        .copy-button {
-            flex-shrink: 0;
-            padding: 6px 11px;
-            border: 1px solid #373d44;
-            border-radius: 7px;
-            background: #1a1e23;
-            color: #cfd4d9;
-            cursor: pointer;
-            font-size: 12px;
-        }
-
-        .copy-button:hover {
-            border-color: #e4a518;
-            color: #e4a518;
-        }
-
-        .thank-you {
-            margin-top: 22px;
-            color: #858d96;
-            font-size: 14px;
-        }
-
-        /* ================= FOOTER ================= */
-
-        footer {
-            padding: 50px 0 60px;
-            text-align: center;
-            color: #707780;
-            font-size: 13px;
-        }
-
-        .footer-brand {
-            margin-bottom: 5px;
-            color: #e4a518;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-
-        .footer-links {
-            margin-top: 15px;
-        }
-
-        .footer-links a {
-            margin: 0 8px;
-            color: #858d96;
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            color: #e4a518;
-        }
-
-        /* ================= MOBILE ================= */
-
-        @media (max-width: 650px) {
-
-            header {
-                padding: 55px 0 40px;
-            }
-
-            .brand {
-                font-size: 31px;
-                letter-spacing: 3px;
-            }
-
-            nav a {
-                padding: 13px 9px;
-                font-size: 13px;
-            }
-
-            .hero {
-                padding: 65px 0;
-            }
-
-            .hero h1 {
-                font-size: 30px;
-            }
-
-            section {
-                padding: 50px 0;
-            }
-
-            .development-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .account-row {
-                align-items: flex-start;
-                flex-wrap: wrap;
-            }
-
-            .account-label {
-                width: 100%;
-            }
-
-            .account-value {
-                width: calc(100% - 65px);
-            }
-
-            .support-box,
-            .app-card {
-                padding: 21px;
-            }
-        }
-
-    </style>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>TULIP4SM1 — Independent Software Development</title>
+
+<meta name="description"
+      content="TULIP4SM1 — Independent software development, privacy-focused applications and practical tools.">
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    margin: 0;
+
+    background:
+        radial-gradient(
+            circle at 50% -10%,
+            rgba(228,165,24,0.13),
+            transparent 38%
+        ),
+        radial-gradient(
+            circle at 100% 60%,
+            rgba(228,165,24,0.045),
+            transparent 30%
+        ),
+        #090b0e;
+
+    color: #eeeeee;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Arial,
+        sans-serif;
+
+    line-height: 1.6;
+}
+
+
+/* =====================================================
+   CONTAINER
+   ===================================================== */
+
+.container {
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: auto;
+
+    padding:
+        0 22px;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+header {
+
+    padding:
+        78px 0 55px;
+
+    text-align: center;
+
+    position: relative;
+}
+
+.brand {
+
+    font-size: 43px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
+
+    color: #e4a518;
+
+    text-shadow:
+        0 0 25px rgba(228,165,24,0.18);
+}
+
+.tagline {
+
+    margin-top: 9px;
+
+    color: #aeb4bb;
+
+    font-size: 16px;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =====================================================
+   NAVIGATION
+   ===================================================== */
+
+nav {
+
+    border-top:
+        1px solid rgba(228,165,24,0.14);
+
+    border-bottom:
+        1px solid #20242a;
+
+    background:
+        rgba(9,11,14,0.86);
+
+    padding: 14px 0;
+
+    text-align: center;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 10;
+
+    backdrop-filter: blur(10px);
+}
+
+nav a {
+
+    color: #aeb4bb;
+
+    text-decoration: none;
+
+    margin: 0 13px;
+
+    font-size: 14px;
+
+    transition:
+        color 0.2s ease;
+}
+
+nav a:hover {
+
+    color: #e4a518;
+}
+
+
+/* =====================================================
+   SECTIONS
+   ===================================================== */
+
+section {
+
+    padding:
+        58px 0;
+
+    border-bottom:
+        1px solid #1d2126;
+}
+
+h1,
+h2,
+h3 {
+
+    font-weight: 700;
+}
+
+h2 {
+
+    margin:
+        0 0 18px;
+
+    color: #e4a518;
+
+    font-size: 25px;
+}
+
+p {
+
+    color: #c5c9ce;
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   INTRO
+   ===================================================== */
+
+.intro {
+
+    text-align: center;
+
+    padding:
+        72px 0 65px;
+}
+
+.intro h1 {
+
+    margin: 0;
+
+    font-size: 31px;
+
+    color: #f4f4f4;
+}
+
+.intro p {
+
+    max-width: 670px;
+
+    margin:
+        18px auto 0;
+
+    font-size: 17px;
+
+    color: #aeb4bb;
+}
+
+
+/* =====================================================
+   GOLD LINE
+   ===================================================== */
+
+.gold-line {
+
+    width: 55px;
+
+    height: 2px;
+
+    margin:
+        20px auto 0;
+
+    background: #e4a518;
+
+    box-shadow:
+        0 0 12px rgba(228,165,24,0.35);
+}
+
+
+/* =====================================================
+   APP CARD
+   ===================================================== */
+
+.app {
+
+    position: relative;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(228,165,24,0.055),
+            rgba(19,22,26,0.96) 45%
+        );
+
+    border:
+        1px solid #2a2d31;
+
+    border-radius: 15px;
+
+    padding: 25px;
+
+    margin-top: 22px;
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.22);
+}
+
+.app::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 18px;
+    bottom: 18px;
+
+    width: 2px;
+
+    background: #e4a518;
+
+    border-radius: 2px;
+
+    box-shadow:
+        0 0 10px rgba(228,165,24,0.25);
+}
+
+.app h3 {
+
+    margin:
+        0 0 7px;
+
+    padding-left: 10px;
+
+    font-size: 21px;
+
+    color: #f1f1f1;
+}
+
+.app p {
+
+    margin: 0;
+
+    padding-left: 10px;
+}
+
+
+/* =====================================================
+   DEVELOPMENT
+   ===================================================== */
+
+.development-box {
+
+    margin-top: 22px;
+
+    padding: 24px;
+
+    border:
+        1px solid #252a30;
+
+    border-radius: 14px;
+
+    background:
+        rgba(255,255,255,0.018);
+}
+
+
+/* =====================================================
+   SUPPORT
+   ===================================================== */
+
+.support-box {
+
+    margin-top: 24px;
+
+    padding: 22px 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(228,165,24,0.075),
+            rgba(19,22,26,0.96) 55%
+        );
+
+    border:
+        1px solid rgba(228,165,24,0.20);
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.25);
+}
+
+.support-note {
+
+    margin-top: 0;
+}
+
+
+/* =====================================================
+   ACCOUNT ROW
+   ===================================================== */
+
+.account-row {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 14px 0;
+
+    border-bottom:
+        1px solid #292d32;
+}
+
+.account-row:last-child {
+
+    border-bottom: none;
+}
+
+.account-label {
+
+    width: 125px;
+
+    flex-shrink: 0;
+
+    color: #999fa7;
+
+    font-size: 14px;
+}
+
+.account-value {
+
+    flex: 1;
+
+    color: #f2f2f2;
+
+    word-break: break-word;
+
+    font-size: 15px;
+}
+
+
+/* =====================================================
+   COPY BUTTON
+   ===================================================== */
+
+.copy-button {
+
+    border:
+        1px solid #3a4048;
+
+    background:
+        #181c21;
+
+    color: #dfe3e7;
+
+    border-radius: 7px;
+
+    padding:
+        6px 11px;
+
+    cursor: pointer;
+
+    font-size: 12px;
+
+    transition:
+        all 0.2s ease;
+}
+
+.copy-button:hover {
+
+    border-color: #e4a518;
+
+    color: #e4a518;
+
+    background:
+        rgba(228,165,24,0.06);
+}
+
+.copy-button:active {
+
+    transform:
+        scale(0.96);
+}
+
+
+/* =====================================================
+   SUPPORT MESSAGE
+   ===================================================== */
+
+.support-thanks {
+
+    margin-top: 22px;
+
+    text-align: center;
+
+    color: #9299a1;
+
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+
+    text-align: center;
+
+    padding:
+        48px 0 58px;
+
+    color: #707780;
+
+    font-size: 14px;
+}
+
+.footer-brand {
+
+    color: #e4a518;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 5px;
+
+    text-shadow:
+        0 0 14px rgba(228,165,24,0.15);
+}
+
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
+@media (max-width: 600px) {
+
+    header {
+
+        padding-top: 55px;
+    }
+
+    .brand {
+
+        font-size: 32px;
+
+        letter-spacing: 3px;
+    }
+
+    .intro {
+
+        padding-top: 55px;
+    }
+
+    .intro h1 {
+
+        font-size: 27px;
+    }
+
+    nav a {
+
+        margin: 0 7px;
+
+        font-size: 13px;
+    }
+
+    .account-row {
+
+        align-items: flex-start;
+
+        flex-wrap: wrap;
+    }
+
+    .account-label {
+
+        width: 100%;
+    }
+
+    .account-value {
+
+        width:
+            calc(100% - 65px);
+    }
+
+    .support-box {
+
+        padding:
+            18px;
+    }
+}
+
+</style>
 
 </head>
 
@@ -398,7 +575,9 @@
 <body>
 
 
-<!-- ================= HEADER ================= -->
+<!-- =====================================================
+     HEADER
+     ===================================================== -->
 
 <header>
 
@@ -412,23 +591,34 @@
             Independent Software Development
         </div>
 
+        <div class="gold-line"></div>
+
     </div>
 
 </header>
 
 
-<!-- ================= NAVIGATION ================= -->
+<!-- =====================================================
+     NAVIGATION
+     ===================================================== -->
 
 <nav>
 
-    <div class="container">
+    <a href="#about">
+        About
+    </a>
 
-        <a href="#about">About</a>
-        <a href="#apps">Apps</a>
-        <a href="#development">Development</a>
-        <a href="#support">Support</a>
+    <a href="#apps">
+        Apps
+    </a>
 
-    </div>
+    <a href="#development">
+        Development
+    </a>
+
+    <a href="#support">
+        Support
+    </a>
 
 </nav>
 
@@ -436,15 +626,14 @@
 <main>
 
 
-<!-- ================= HERO ================= -->
+<!-- =====================================================
+     ABOUT
+     ===================================================== -->
 
-<section class="hero">
+<section id="about"
+         class="intro">
 
     <div class="container">
-
-        <div class="hero-badge">
-            Independent Developer
-        </div>
 
         <h1>
             Software built with purpose.
@@ -452,8 +641,8 @@
 
         <p>
             TULIP4SM1 is an independent software development
-            identity focused on building practical, privacy-conscious
-            applications and tools.
+            identity focused on building practical,
+            privacy-conscious applications and tools.
         </p>
 
     </div>
@@ -461,34 +650,9 @@
 </section>
 
 
-<!-- ================= ABOUT ================= -->
-
-<section id="about">
-
-    <div class="container">
-
-        <h2>
-            About TULIP4SM1
-        </h2>
-
-        <p>
-            TULIP4SM1 develops independent software projects
-            with a focus on simplicity, privacy, reliability
-            and user control.
-        </p>
-
-        <p>
-            The goal is straightforward:
-            build useful software without unnecessary
-            complexity or unnecessary collection of user data.
-        </p>
-
-    </div>
-
-</section>
-
-
-<!-- ================= APPS ================= -->
+<!-- =====================================================
+     APPLICATIONS
+     ===================================================== -->
 
 <section id="apps">
 
@@ -498,65 +662,19 @@
             Applications
         </h2>
 
+        <div class="app">
 
-        <div class="app-card">
+            <h3>
+                TulipLock
+            </h3>
 
-            <div class="app-header">
-
-                <div class="app-icon">
-                    T
-                </div>
-
-                <div>
-
-                    <h3 class="app-title">
-                        TulipLock
-                    </h3>
-
-                    <div class="app-subtitle">
-                        Android File Encryption
-                    </div>
-
-                </div>
-
-            </div>
-
-
-            <p class="app-description">
-
-                A privacy-focused file encryption application
+            <p>
+                Privacy-focused file encryption for Android,
                 designed to protect files directly on the
                 user's device.
-
             </p>
 
-
-            <ul class="features">
-
-                <li>
-                    AES-256-GCM authenticated encryption
-                </li>
-
-                <li>
-                    Password-based file protection
-                </li>
-
-                <li>
-                    Files processed locally on the device
-                </li>
-
-                <li>
-                    No advertisements
-                </li>
-
-                <li>
-                    No account required
-                </li>
-
-            </ul>
-
         </div>
-
 
         <!--
             Future applications can be added here.
@@ -567,7 +685,9 @@
 </section>
 
 
-<!-- ================= DEVELOPMENT ================= -->
+<!-- =====================================================
+     DEVELOPMENT
+     ===================================================== -->
 
 <section id="development">
 
@@ -577,52 +697,20 @@
             Development
         </h2>
 
-        <p>
-            TULIP4SM1 develops and maintains independent
-            software projects intended to remain simple,
-            useful and respectful of the user's data.
-        </p>
+        <div class="development-box">
 
+            <p>
+                TULIP4SM1 develops and maintains independent
+                software projects with an emphasis on
+                simplicity, privacy, reliability and
+                user control.
+            </p>
 
-        <div class="development-grid">
-
-            <div class="development-card">
-
-                <strong>
-                    Privacy
-                </strong>
-
-                <span>
-                    User data stays under the user's control.
-                </span>
-
-            </div>
-
-
-            <div class="development-card">
-
-                <strong>
-                    Simplicity
-                </strong>
-
-                <span>
-                    Useful features without unnecessary complexity.
-                </span>
-
-            </div>
-
-
-            <div class="development-card">
-
-                <strong>
-                    Reliability
-                </strong>
-
-                <span>
-                    Continuous maintenance and compatibility improvements.
-                </span>
-
-            </div>
+            <p>
+                Applications are developed independently
+                and are intended to remain simple, useful
+                and respectful of the user's data.
+            </p>
 
         </div>
 
@@ -631,7 +719,9 @@
 </section>
 
 
-<!-- ================= SUPPORT ================= -->
+<!-- =====================================================
+     SUPPORT
+     ===================================================== -->
 
 <section id="support">
 
@@ -641,25 +731,20 @@
             Support TULIP4SM1
         </h2>
 
-        <p class="support-intro">
+        <p class="support-note">
 
-            TULIP4SM1 projects are developed and maintained
-            independently. If you find our software useful,
-            optional support helps us continue development,
-            maintenance and improvements.
+            Our applications are developed and maintained
+            independently.
+
+            If you find our software useful and would like
+            to support continued development, you may
+            optionally support TULIP4SM1 using the
+            information below.
 
         </p>
 
 
         <div class="support-box">
-
-            <h3 class="support-title">
-                Bank Transfer
-            </h3>
-
-            <p class="support-description">
-                Optional support for independent software development.
-            </p>
 
 
             <!-- ACCOUNT NAME -->
@@ -670,16 +755,19 @@
                     Account Name
                 </div>
 
-                <div
-                    class="account-value"
-                    id="accountName">
+                <div class="account-value"
+                     id="accountName">
+
                     YOUR ACCOUNT NAME
+
                 </div>
 
                 <button
                     class="copy-button"
                     onclick="copyText('accountName', this)">
+
                     Copy
+
                 </button>
 
             </div>
@@ -693,16 +781,19 @@
                     Bank
                 </div>
 
-                <div
-                    class="account-value"
-                    id="bankName">
+                <div class="account-value"
+                     id="bankName">
+
                     Habib Bank Limited (HBL)
+
                 </div>
 
                 <button
                     class="copy-button"
                     onclick="copyText('bankName', this)">
+
                     Copy
+
                 </button>
 
             </div>
@@ -716,16 +807,19 @@
                     IBAN
                 </div>
 
-                <div
-                    class="account-value"
-                    id="iban">
+                <div class="account-value"
+                     id="iban">
+
                     YOUR HBL IBAN
+
                 </div>
 
                 <button
                     class="copy-button"
                     onclick="copyText('iban', this)">
+
                     Copy
+
                 </button>
 
             </div>
@@ -739,28 +833,33 @@
                     SWIFT / BIC
                 </div>
 
-                <div
-                    class="account-value"
-                    id="swift">
+                <div class="account-value"
+                     id="swift">
+
                     YOUR HBL SWIFT/BIC
+
                 </div>
 
                 <button
                     class="copy-button"
                     onclick="copyText('swift', this)">
+
                     Copy
+
                 </button>
 
             </div>
 
+
         </div>
 
 
-        <p class="thank-you">
+        <div class="support-thanks">
 
-            Thank you for supporting independent software development.
+            Thank you for supporting independent
+            software development.
 
-        </p>
+        </div>
 
     </div>
 
@@ -770,7 +869,9 @@
 </main>
 
 
-<!-- ================= FOOTER ================= -->
+<!-- =====================================================
+     FOOTER
+     ===================================================== -->
 
 <footer>
 
@@ -784,23 +885,7 @@
             Independent Software Development
         </div>
 
-        <div class="footer-links">
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#apps">
-                Apps
-            </a>
-
-            <a href="#support">
-                Support
-            </a>
-
-        </div>
-
-        <div style="margin-top: 18px;">
+        <div style="margin-top:12px;">
             © 2026 TULIP4SM1
         </div>
 
@@ -809,7 +894,9 @@
 </footer>
 
 
-<!-- ================= COPY SCRIPT ================= -->
+<!-- =====================================================
+     COPY SCRIPT
+     ===================================================== -->
 
 <script>
 
@@ -825,75 +912,69 @@ function copyText(id, button) {
     const text =
         element.innerText.trim();
 
-    if (
-        navigator.clipboard &&
-        window.isSecureContext
-    ) {
+    navigator.clipboard.writeText(text)
+        .then(function () {
 
-        navigator.clipboard.writeText(text)
-            .then(function () {
+            const original =
+                button.innerText;
 
-                showCopied(button);
+            button.innerText =
+                "Copied";
 
-            })
-            .catch(function () {
+            setTimeout(function () {
 
-                fallbackCopy(text, button);
+                button.innerText =
+                    original;
 
-            });
+            }, 1500);
 
-    } else {
+        })
+        .catch(function () {
 
-        fallbackCopy(text, button);
+            /*
+             * Fallback for browsers where
+             * Clipboard API is unavailable.
+             */
 
-    }
-}
+            const range =
+                document.createRange();
 
+            range.selectNodeContents(
+                element
+            );
 
-function fallbackCopy(text, button) {
+            const selection =
+                window.getSelection();
 
-    const area =
-        document.createElement("textarea");
+            selection.removeAllRanges();
 
-    area.value = text;
+            selection.addRange(range);
 
-    area.style.position = "fixed";
-    area.style.opacity = "0";
+            try {
 
-    document.body.appendChild(area);
+                document.execCommand(
+                    "copy"
+                );
 
-    area.select();
+                const original =
+                    button.innerText;
 
-    try {
+                button.innerText =
+                    "Copied";
 
-        document.execCommand("copy");
+                setTimeout(function () {
 
-        showCopied(button);
+                    button.innerText =
+                        original;
 
-    } catch (e) {
+                }, 1500);
 
-        button.innerText = "Copy";
+            } catch (e) {
+            }
 
-    }
+            selection.removeAllRanges();
 
-    document.body.removeChild(area);
-}
-
-
-function showCopied(button) {
-
-    const original =
-        button.innerText;
-
-    button.innerText =
-        "Copied";
-
-    setTimeout(function () {
-
-        button.innerText =
-            original;
-
-    }, 1500);
+        });
 }
 
 </script>

@@ -83,6 +83,18 @@ header {
     position: relative;
 }
 
+.brand-logo {
+
+    width: 150px;
+    height: 150px;
+
+    object-fit: contain;
+
+    display: block;
+
+    margin: 0 auto 18px;
+}
+
 .brand {
 
     font-size: 43px;
@@ -318,6 +330,33 @@ p {
 
 
 /* =====================================================
+   POLICY LINK
+   ===================================================== */
+
+.app-policy {
+
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding-left: 10px;
+
+    color: #e4a518;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.app-policy:hover {
+
+    text-decoration: underline;
+}
+
+
+/* =====================================================
    DEVELOPMENT
    ===================================================== */
 
@@ -517,6 +556,14 @@ footer {
         padding-top: 55px;
     }
 
+    .brand-logo {
+
+        width: 120px;
+        height: 120px;
+
+        margin-bottom: 15px;
+    }
+
     .brand {
 
         font-size: 32px;
@@ -581,6 +628,12 @@ footer {
 <header>
 
     <div class="container">
+
+        <img
+            class="brand-logo"
+            src="tulip4sm1-logo.png"
+            alt="TULIP4SM1 Logo"
+        >
 
         <div class="brand">
             TULIP4SM1
@@ -672,6 +725,35 @@ footer {
                 designed to protect files directly on the
                 user's device.
             </p>
+
+            <a class="app-policy"
+               href="https://tulip4sm1.github.io/TulipLock-Privacy/">
+
+                Policy
+
+            </a>
+
+        </div>
+
+
+        <div class="app">
+
+            <h3>
+                TulipAccounts
+            </h3>
+
+            <p>
+                Privacy-focused personal finance application
+                for managing accounts and expenses directly
+                on the user's device.
+            </p>
+
+            <a class="app-policy"
+               href="https://tulip4sm1.github.io/TulipAccounts-Privacy/">
+
+                Policy
+
+            </a>
 
         </div>
 

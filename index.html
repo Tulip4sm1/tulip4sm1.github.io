@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,16 +47,10 @@ body {
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
-        Roboto
-       ;
+        Roboto;
 
     line-height: 1.6;
 }
-
-
-/* =====================================================
-   CONTAINER
-   ===================================================== */
 
 .container {
 
@@ -64,8 +59,7 @@ body {
 
     margin: auto;
 
-    padding:
-        0 22px;
+    padding: 0 22px;
 }
 
 
@@ -75,8 +69,7 @@ body {
 
 header {
 
-    padding:
-        78px 0 55px;
+    padding: 55px 0 38px;
 
     text-align: center;
 
@@ -85,19 +78,19 @@ header {
 
 .brand-logo {
 
-    width: 150px;
-    height: 150px;
+    width: 135px;
+    height: 135px;
 
     object-fit: contain;
 
     display: block;
 
-    margin: 0 auto 18px;
+    margin: 0 auto 14px;
 }
 
 .brand {
 
-    font-size: 43px;
+    font-size: 41px;
 
     font-weight: 800;
 
@@ -111,7 +104,7 @@ header {
 
 .tagline {
 
-    margin-top: 9px;
+    margin-top: 7px;
 
     color: #aeb4bb;
 
@@ -134,9 +127,9 @@ nav {
         1px solid #20242a;
 
     background:
-        rgba(9,11,14,0.86);
+        rgba(9,11,14,0.88);
 
-    padding: 14px 0;
+    padding: 10px 0;
 
     text-align: center;
 
@@ -151,21 +144,38 @@ nav {
 
 nav a {
 
-    color: #aeb4bb;
+    display: inline-block;
+
+    color: #c5c9ce;
 
     text-decoration: none;
 
-    margin: 0 13px;
+    margin: 2px 4px;
 
-    font-size: 14px;
+    padding: 7px 13px;
+
+    border: 1px solid #30353b;
+
+    border-radius: 9px;
+
+    font-size: 15px;
+
+    font-weight: 600;
 
     transition:
-        color 0.2s ease;
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
 }
 
 nav a:hover {
 
     color: #e4a518;
+
+    border-color: #e4a518;
+
+    background:
+        rgba(228,165,24,0.055);
 }
 
 
@@ -175,8 +185,7 @@ nav a:hover {
 
 section {
 
-    padding:
-        58px 0;
+    padding: 42px 0;
 
     border-bottom:
         1px solid #1d2126;
@@ -192,7 +201,7 @@ h3 {
 h2 {
 
     margin:
-        0 0 18px;
+        0 0 15px;
 
     color: #e4a518;
 
@@ -216,7 +225,7 @@ p {
     text-align: center;
 
     padding:
-        72px 0 65px;
+        48px 0 44px;
 }
 
 .intro h1 {
@@ -233,7 +242,7 @@ p {
     max-width: 670px;
 
     margin:
-        18px auto 0;
+        14px auto 0;
 
     font-size: 17px;
 
@@ -252,7 +261,7 @@ p {
     height: 2px;
 
     margin:
-        20px auto 0;
+        16px auto 0;
 
     background: #e4a518;
 
@@ -281,9 +290,9 @@ p {
 
     border-radius: 15px;
 
-    padding: 25px;
+    padding: 22px 25px;
 
-    margin-top: 22px;
+    margin-top: 17px;
 
     box-shadow:
         0 8px 30px rgba(0,0,0,0.22);
@@ -312,7 +321,7 @@ p {
 .app h3 {
 
     margin:
-        0 0 7px;
+        0 0 6px;
 
     padding-left: 10px;
 
@@ -330,16 +339,32 @@ p {
 
 
 /* =====================================================
-   POLICY LINK
+   APP LINKS
    ===================================================== */
 
-.app-policy {
+.app-links {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: 12px;
+
+    padding-left: 10px;
+}
+
+.app-link {
 
     display: inline-block;
 
-    margin-top: 10px;
+    padding: 7px 13px;
 
-    padding-left: 10px;
+    border:
+        1px solid #3a4048;
+
+    border-radius: 8px;
 
     color: #e4a518;
 
@@ -348,11 +373,20 @@ p {
     font-size: 14px;
 
     font-weight: 600;
+
+    background:
+        rgba(228,165,24,0.035);
+
+    transition:
+        all 0.2s ease;
 }
 
-.app-policy:hover {
+.app-link:hover {
 
-    text-decoration: underline;
+    border-color: #e4a518;
+
+    background:
+        rgba(228,165,24,0.08);
 }
 
 
@@ -362,9 +396,9 @@ p {
 
 .development-box {
 
-    margin-top: 22px;
+    margin-top: 17px;
 
-    padding: 24px;
+    padding: 21px 24px;
 
     border:
         1px solid #252a30;
@@ -375,142 +409,77 @@ p {
         rgba(255,255,255,0.018);
 }
 
+.development-box p {
+
+    margin:
+        0 0 13px;
+}
+
+.development-box p:last-child {
+
+    margin-bottom: 0;
+}
+
 
 /* =====================================================
    SUPPORT
    ===================================================== */
 
-.support-box {
+.support-link-box {
 
-    margin-top: 24px;
+    margin-top: 17px;
 
-    padding: 16px 18px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(228,165,24,0.075),
-            rgba(19,22,26,0.96) 55%
-        );
+    padding: 20px 22px;
 
     border:
         1px solid rgba(228,165,24,0.20);
 
-    border-radius: 15px;
-
-    box-shadow:
-        0 10px 35px rgba(0,0,0,0.25);
-}
-
-.support-note {
-
-    margin-top: 0;
-}
-
-
-/* =====================================================
-   ACCOUNT ROW
-   ===================================================== */
-
-.account-row {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 4px;
-
-    padding: 5px 0;
-
-    border-bottom:
-        1px solid #292d32;
-}
-
-.account-row:last-child {
-
-    border-bottom: none;
-}
-
-.account-label {
-
-    width: 125px;
-
-    flex-shrink: 0;
-
-    color: #999fa7;
-
-    font-size: 14px;
-}
-
-.account-value {
-
-    flex: 1;
-
-    color: #f2f2f2;
-
-    word-break: break-word;
-
-    font-size: 15px;
-}
-
-
-/* =====================================================
-   COPY BUTTON
-   ===================================================== */
-
-.copy-button {
-
-    border:
-        1px solid #3a4048;
+    border-radius: 14px;
 
     background:
-        #181c21;
+        linear-gradient(
+            145deg,
+            rgba(228,165,24,0.055),
+            rgba(19,22,26,0.96) 55%
+        );
+}
 
-    color: #dfe3e7;
+.support-link-box p {
 
-    border-radius: 7px;
+    margin:
+        0 0 13px;
+}
 
-    padding:
-        6px 11px;
+.support-button {
 
-    cursor: pointer;
+    display: inline-block;
 
-    font-size: 12px;
+    padding: 9px 16px;
+
+    border:
+        1px solid #e4a518;
+
+    border-radius: 9px;
+
+    color: #e4a518;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    background:
+        rgba(228,165,24,0.055);
 
     transition:
         all 0.2s ease;
 }
 
-.copy-button:hover {
-
-    border-color: #e4a518;
-
-    color: #e4a518;
+.support-button:hover {
 
     background:
-        rgba(228,165,24,0.06);
-}
-
-.copy-button:active {
-
-    transform:
-        scale(0.96);
-}
-
-
-/* =====================================================
-   SUPPORT MESSAGE
-   ===================================================== */
-
-.support-thanks {
-
-    margin-top: 22px;
-
-    text-align: center;
-
-    color: #9299a1;
-
-    font-size: 14px;
+        rgba(228,165,24,0.12);
 }
 
 
@@ -523,7 +492,7 @@ footer {
     text-align: center;
 
     padding:
-        48px 0 58px;
+        35px 0 42px;
 
     color: #707780;
 
@@ -538,7 +507,7 @@ footer {
 
     letter-spacing: 3px;
 
-    margin-bottom: 5px;
+    margin-bottom: 4px;
 
     text-shadow:
         0 0 14px rgba(228,165,24,0.15);
@@ -553,63 +522,115 @@ footer {
 
     header {
 
-        padding-top: 55px;
+        padding:
+            38px 0 28px;
     }
 
     .brand-logo {
 
-        width: 120px;
-        height: 120px;
+        width: 110px;
+        height: 110px;
 
-        margin-bottom: 15px;
+        margin-bottom: 12px;
     }
 
     .brand {
 
-        font-size: 32px;
+        font-size: 31px;
 
         letter-spacing: 3px;
     }
 
-    .intro {
+    .tagline {
 
-        padding-top: 55px;
+        font-size: 14px;
     }
 
-    .intro h1 {
+    nav {
 
-        font-size: 27px;
+        padding: 8px 5px;
     }
 
     nav a {
 
-        margin: 0 7px;
+        margin: 2px 2px;
 
-        font-size: 13px;
+        padding: 6px 10px;
+
+        font-size: 14px;
     }
 
-    .account-row {
-
-        align-items: flex-start;
-
-        flex-wrap: wrap;
-    }
-
-    .account-label {
-
-        width: 100%;
-    }
-
-    .account-value {
-
-        width:
-            calc(100% - 65px);
-    }
-
-    .support-box {
+    section {
 
         padding:
-            18px;
+            34px 0;
+    }
+
+    .intro {
+
+        padding:
+            38px 0 34px;
+    }
+
+    .intro h1 {
+
+        font-size: 26px;
+    }
+
+    .intro p {
+
+        margin-top: 11px;
+
+        font-size: 16px;
+    }
+
+    h2 {
+
+        font-size: 23px;
+
+        margin-bottom: 12px;
+    }
+
+    .app {
+
+        padding:
+            20px 20px;
+
+        margin-top: 14px;
+    }
+
+    .app h3 {
+
+        font-size: 20px;
+    }
+
+    .app-links {
+
+        gap: 7px;
+
+        padding-left: 10px;
+    }
+
+    .development-box {
+
+        margin-top: 14px;
+
+        padding:
+            18px 20px;
+    }
+
+    .support-link-box {
+
+        margin-top: 14px;
+
+        padding:
+            18px 20px;
+    }
+
+    footer {
+
+        padding:
+            28px 0 34px;
     }
 }
 
@@ -656,21 +677,13 @@ footer {
 
 <nav>
 
-    <a href="#about">
-        About
-    </a>
+    <a href="#about">About</a>
 
-    <a href="#apps">
-        Apps
-    </a>
+    <a href="#apps">Apps</a>
 
-    <a href="#development">
-        Development
-    </a>
+    <a href="#development">Development</a>
 
-    <a href="#support">
-        Support
-    </a>
+    <a href="#support">Support</a>
 
 </nav>
 
@@ -714,6 +727,9 @@ footer {
             Applications
         </h2>
 
+
+        <!-- TULIPLOCK -->
+
         <div class="app">
 
             <h3>
@@ -723,18 +739,32 @@ footer {
             <p>
                 Privacy-focused file encryption for Android,
                 designed to protect files directly on the
-                user's device.
+                user's device without requiring an account
+                or cloud storage.
             </p>
 
-            <a class="app-policy"
-               href="https://tulip4sm1.github.io/TulipLock-Privacy/">
+            <div class="app-links">
 
-                Privacy Policy
+                <a
+                    class="app-link"
+                    href="https://play.google.com/store/apps/details?id=com.tulip4sm1.lock"
+                    target="_blank"
+                    rel="noopener">
+                    Google Play
+                </a>
 
-            </a>
+                <a
+                    class="app-link"
+                    href="https://tulip4sm1.github.io/TulipLock-Privacy/">
+                    Privacy Policy
+                </a>
+
+            </div>
 
         </div>
 
+
+        <!-- TULIPACCOUNTS -->
 
         <div class="app">
 
@@ -748,18 +778,22 @@ footer {
                 on the user's device.
             </p>
 
-            <a class="app-policy"
-               href="https://tulip4sm1.github.io/TulipAccounts-Privacy/">
+            <div class="app-links">
+                 <span class="app-link">
+                    Up Coming Soon
+                </span>
 
-                Privacy Policy
+                <a
+                    class="app-link"
+                    href="https://tulip4sm1.github.io/TulipAccounts-Privacy/">
+                    Privacy Policy
+                </a>
 
-            </a>
+               
+
+            </div>
 
         </div>
-
-        <!--
-            Future applications can be added here.
-        -->
 
     </div>
 
@@ -812,133 +846,20 @@ footer {
             Support TULIP4SM1
         </h2>
 
-        <p class="support-note">
+        <div class="support-link-box">
 
-            Our applications are developed and maintained
-            independently.
+            <p>
+                Our applications are developed and maintained
+                independently. If you find our software useful
+                and would like to support continued development,
+                you can learn more on our support page.
+            </p>
 
-            If you find our software useful and would like
-            to support continued development, you may
-            optionally support TULIP4SM1 using the
-            information below.
-
-        </p>
-
-
-        <div class="support-box">
-
-
-            <!-- ACCOUNT NAME -->
-
-            <div class="account-row">
-
-                <div class="account-label">
-                    Account Name
-                </div>
-
-                <div class="account-value"
-                     id="accountName">
-
-                    Muhammad Bilal
-
-                </div>
-
-                <button
-                    class="copy-button"
-                    onclick="copyText('accountName', this)">
-
-                    Copy
-
-                </button>
-
-            </div>
-
-
-            <!-- BANK -->
-
-            <div class="account-row">
-
-                <div class="account-label">
-                    Bank
-                </div>
-
-                <div class="account-value"
-                     id="bankName">
-
-                    Mashreq Bank Pakistan Limited
-
-                </div>
-
-                <button
-                    class="copy-button"
-                    onclick="copyText('bankName', this)">
-
-                    Copy
-
-                </button>
-
-            </div>
-
-
-            <!-- IBAN -->
-
-            <div class="account-row">
-
-                <div class="account-label">
-                    IBAN
-                </div>
-
-                <div class="account-value"
-                     id="iban">
-
-                    PK61MSHQ0000089010031723
-
-                </div>
-
-                <button
-                    class="copy-button"
-                    onclick="copyText('iban', this)">
-
-                    Copy
-
-                </button>
-
-            </div>
-
-
-            <!-- SWIFT -->
-
-            <div class="account-row">
-
-                <div class="account-label">
-                    SWIFT / BIC
-                </div>
-
-                <div class="account-value"
-                     id="swift">
-
-                     MSHQPKKK
-
-                </div>
-
-                <button
-                    class="copy-button"
-                    onclick="copyText('swift', this)">
-
-                    Copy
-
-                </button>
-
-            </div>
-
-
-        </div>
-
-
-        <div class="support-thanks">
-
-            Thank you for supporting independent
-            software development.
+            <a
+                class="support-button"
+                href="support.html">
+                Support Development
+            </a>
 
         </div>
 
@@ -966,100 +887,13 @@ footer {
             Independent Software Development
         </div>
 
-        <div style="margin-top:12px;">
+        <div style="margin-top:9px;">
             © 2026 TULIP4SM1
         </div>
 
     </div>
 
 </footer>
-
-
-<!-- =====================================================
-     COPY SCRIPT
-     ===================================================== -->
-
-<script>
-
-function copyText(id, button) {
-
-    const element =
-        document.getElementById(id);
-
-    if (!element) {
-        return;
-    }
-
-    const text =
-        element.innerText.trim();
-
-    navigator.clipboard.writeText(text)
-        .then(function () {
-
-            const original =
-                button.innerText;
-
-            button.innerText =
-                "Copied";
-
-            setTimeout(function () {
-
-                button.innerText =
-                    original;
-
-            }, 1500);
-
-        })
-        .catch(function () {
-
-            /*
-             * Fallback for browsers where
-             * Clipboard API is unavailable.
-             */
-
-            const range =
-                document.createRange();
-
-            range.selectNodeContents(
-                element
-            );
-
-            const selection =
-                window.getSelection();
-
-            selection.removeAllRanges();
-
-            selection.addRange(range);
-
-            try {
-
-                document.execCommand(
-                    "copy"
-                );
-
-                const original =
-                    button.innerText;
-
-                button.innerText =
-                    "Copied";
-
-                setTimeout(function () {
-
-                    button.innerText =
-                        original;
-
-                }, 1500);
-
-            } catch (e) {
-            }
-
-            selection.removeAllRanges();
-
-        });
-}
-
-</script>
-
 
 </body>
 
